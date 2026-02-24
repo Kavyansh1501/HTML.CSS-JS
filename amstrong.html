@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function count(n){
+            let c=0;
+            while(n>0){
+                n=parseInt(n/10);
+                c=c+1;
+            }
+            return c;
+        }
+        function fun(){
+            var n=document.getElementById("g1").value;
+            var c=count(n);
+            let s=0;
+            let t=n;
+            while(n>0){
+                d=n%10;
+                s=s+Math.pow(d,c);
+                n=Math.floor(n/10);
+            }
+            if(s==t)
+            alert("armstrong number");
+        else
+        alert("not armstrong");
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="g1" name="t1"/>
+    <input type="button" value="submit" onclick="fun()"/>
+    
+    
+</body>
+</html>
