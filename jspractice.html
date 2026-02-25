@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="javascript">
+        function fun(){
+            var a=document.getElementById("g1").value;
+            var b=0;
+            var c=parseInt(a);
+            for(var i=1;i<=c;i++){
+                if(c%i==0){
+                    b++;
+                }
+            }
+            if(b==2){
+                document.getElementById("g1").value
+                alert("prime number");
+            }
+            else{
+                alert("not a prime number");
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="t1" id="g1"/>
+    <input type="button" value="submit" onclick="fun()"/>
+</body>
+</html>
