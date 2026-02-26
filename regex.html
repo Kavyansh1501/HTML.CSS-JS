@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            var a=document.forms["a1"]["email"].value;
+            let emailPattern=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+             if(!emailPattern.test(a)){
+                alert("Invalid email format");
+                return false;}
+                return true;
+
+        }
+    </script>
+</head>
+<body>
+    <form name="a1" onsubmit="return fun()">
+        <input type="email" placeholder="enter email" name="email">
+        <button type="submit"> sumbit</button>
+    </form>
+    
+</body>
+</html>
