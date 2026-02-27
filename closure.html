@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        function bankAccount(){
+            let balacnce=1000;
+            return{
+                deposite:function(amt){
+                    balance=balacnce+amt;
+                    return balance;
+                },
+                withdraw:function(amt){
+                    balacnce=balance=balance-amt;
+                    return balance;
+                }
+            };
+        }
+
+        let myAcc=bankAccount();
+
+        console.log(myAcc.deposite(500));
+        console.log(myAcc.withdraw(200));
+        console.log(bankAccount().withdraw(1000));
+        
+    </script>
+    
+</body>
+</html>
